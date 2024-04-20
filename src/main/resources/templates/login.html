@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<section>
+		
+		<div
+			style="width: 35%; margin: -1% 32%; padding: 30px; border-radius: 30px;">
+
+			<h1 align="center" class="fw-bold " style="color: #11235A">Log In</h1>
+			
+			<th:block th:if="${param.error}">
+				<p class="alert alert-danger fs-5 d-flex align-items-center justify-content-center" style="height: 3rem;">Invalid Email_ID or Password</p>
+			</th:block>
+
+			<th:block th:if="${param.logout}">
+				<p class="alert alert-success fs-5 d-flex align-items-center justify-content-center" style="height: 3rem;">Logout Successfully</p>
+			</th:block>
+			
+			
+			<form th:action="@{/userLogin}"
+				class="justify-content-center"
+				style="margin-top: 15px; padding: 30px; border: 1px solid black; border-radius: 20px; background-color: #EEF5FF"
+				method="post">
+
+				<div class="mb-3">
+					<label for="email" class="form-label fw-bold">Email:</label> <input
+						type="email" class="form-control" name="email" required="required" placeholder="Enter email id">
+				</div>
+				<div class="mb-3">
+					<label for="password" class="form-label fw-bold">Password:</label> <input
+						type="password" class="form-control" name="password" required="required" placeholder="Enter password">
+				</div>
+				
+				
+			 	<input type="submit" value="Log In"
+					class="btn btn-success" style="font-size: 20px; padding: 2% 40%;">
+
+				<div class="mt-4" style="margin-left: 4rem">
+					<p>
+						Don't have an account? <a href="/Uregister" style="font-size: 20px;">Register</a>
+					</p>
+				</div>
+			</form>
+		</div>
+		
+	</section>
+	
+</body>
+</html>

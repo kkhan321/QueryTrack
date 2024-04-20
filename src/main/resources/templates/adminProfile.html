@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+	
+	<style>
+
+/* Services Section */
+.services {
+	background-color: #fff;
+	padding: 80px 0;
+	margin-top: -40px
+}
+
+.services .service {
+    border-radius:15px;
+	width: 45%;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: #31363F;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.services .service h2 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: white;
+}
+.services .service p{
+color: white;
+
+}
+
+   </style>
+   
+   
+   <div class="services">
+   <h1 class="text-center">Welcome,admin</h1>
+			<div class="container" style="display: flex;justify-content: flex-end;align-content: center;flex-wrap: wrap;">
+				<div class="service">
+					 <h2>Solve Customer Problem</h2>
+                  <p>Manage and oversee the efficient handling of customer queries.</p>
+      		</div>
+				<div class="service">
+					 <h2>Admin Dashboard</h2>
+                 <p>View and analyze query statistics, assign queries to employees, and monitor resolution progress.</p>
+     		</div>
+				<div class="service">
+					 <h2>Query Analytics</h2>
+      <p>Track key metrics such as query volume, resolution time, and customer satisfaction ratings.</p>
+ 
+				</div>
+				
+			</div>
+		</div>
+	</section>
+</body>
+</html>

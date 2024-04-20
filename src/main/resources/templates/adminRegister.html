@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Page</title>
+	
+</head>
+<body>
+
+	<section >
+
+		<div
+			style="width: 45%; margin: -1% 32%; padding: 30px; border-radius: 30px;">
+
+			<h1 align="center" class="fw-bold " style="color: #11235A">ADMIN REGISTRATION FORM</h1>
+
+			 <th:block th:if="${session.msg}">
+   				 <p class="text-center alert alert-success text-success fs-5 d-flex align-items-center justify-content-center" th:text="${session.msg}" style="height: 3rem;"></p>
+     			<th:block th:text="${@adminService.removeSessionMessage()}"></th:block>
+ 		     </th:block>
+			
+			<th:block th:if="${session.emsg}">
+   				 <p class="text-center alert alert-danger text-danger fs-5 d-flex align-items-center justify-content-center" th:text="${session.emsg}" style="height: 3rem;"></p>
+    			<th:block th:text="${@adminService.removeSessionMessage1()}"></th:block>
+ 			</th:block> 
+			
+			<form th:action="@{/adminRegister}"  th:object="${admin}"
+				class="justify-content-center "
+				style="margin-top: 15px; padding: 30px; border: 1px solid black; border-radius: 20px; background-color: #EEF5FF"
+				method="post">
+
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label"> <span
+						style="font-weight: bold; font-size: 17px; color: #11235A">Email:
+					</span></label> <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+						style="color: red; font-style: italic;"></span>   <input
+						type="email" class="form-control" id="email" name="email"
+						placeholder="Enter your email..">
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label"><span
+						style="font-weight: bold; font-size: 17px; color: #11235A">Password:
+					</span></label>  <span th:if="${#fields.hasErrors('password')}"
+						th:errors="*{password}" style="color: red; font-style: italic;"></span> 
+					<input type="password" class="form-control" id="password"
+						th:field="*{password}" placeholder="Enter your contact number..">
+				</div>
+
+				<input type="hidden" name="role" value="ROLE_ADMIN">
+			 	<br>
+			 	
+			 	<input type="submit" value="Register"
+					class="btn btn-success" style="font-size: 20px; padding: 2% 40%;">
+
+				<div class="mt-4" style="margin-left: 3rem">
+					<p>
+						Already have an admin account? <a href="/signin" style="font-size: 20px;">Login</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+	</section>
+
+
+</body>
+</html>

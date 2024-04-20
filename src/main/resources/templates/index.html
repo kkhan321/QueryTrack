@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+
+		<style>
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+	background-color: #f5f5f5;
+	padding: 100px 0;
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 3rem;
+	margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+	background-color: #fff;
+	padding: 80px 0;
+}
+
+.services .service {
+    border-radius:15px;
+	width: 45%;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: #31363F;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.services .service h2 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: white;
+}
+.services .service p{
+color: white;
+
+}
+
+/* About Us Section */
+.about-us {
+	background-color: #f5f5f5;
+	padding: 80px 0;
+}
+
+.about-us h2 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.about-us p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+}
+     </style>
+
+
+
+		<div class="hero">
+			<div class="container">
+				<h1>Welcome to QueryTrack</h1>
+				<p>Track and manage customer queries efficiently.</p>
+			</div>
+		</div>
+
+		<!-- Services Section -->
+		<div class="services" id="services">
+			<div class="container">
+				<div class="service">
+					<h2>Query Management</h2>
+					<p>Effortlessly track and manage customer queries.</p>
+				</div>
+				<div class="service">
+					<h2>Employee Assignment</h2>
+					<p>Assign queries to company employees for efficient handling.</p>
+				</div>
+				<div class="service">
+					<h2>Real-time Updates</h2>
+					<p>Stay updated with real-time status updates on query
+						resolution.</p>
+				</div>
+				<div class="service">
+					<h2>Secure Communication</h2>
+					<p>Ensure secure communication channels for customer queries.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- About Us Section -->
+		<div class="about-us" id="about">
+			<div class="container">
+				<h2>About QueryTrack</h2>
+				<p>QueryTrack is a cutting-edge solution for businesses to
+					streamline their customer query management process. Our platform
+					allows companies to efficiently track, assign, and resolve customer
+					queries, ensuring customer satisfaction and business success.</p>
+				<p>With QueryTrack, you can empower your employees with the
+					tools they need to handle customer queries effectively, while
+					providing customers with a seamless communication experience.</p>
+			</div>
+		</div>
+
+
+
+
+
+	</section>
+</body>
+</html>
